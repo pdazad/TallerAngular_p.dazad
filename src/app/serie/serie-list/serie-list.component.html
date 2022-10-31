@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+    <div id="principal" class="col">
+      <img class ="photoh" src="https://cdn-icons-png.flaticon.com/512/6209/6209965.png">
+      <h1>TV Series</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 col-table">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col" class="table-info">#</th>
+            <th scope="col" class="table-info">Name</th>
+            <th scope="col" class="table-info">Channel</th>
+            <th scope="col" class="table-info">Seasons</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of series">
+            <td>
+              <dd>{{ s.id }}</dd>
+            </td>
+            <td>
+              <dd>{{ s.name }}</dd>
+            </td>
+            <td>
+              <dd>{{ s.channel }}</dd>
+            </td>
+            <td>
+              <dd>{{ s.seasons }}</dd>
+            </td>
+          </tr>
+        </tbody>
+        <caption>
+          <div class="row">
+              <p>Seasons average: {{average}}</p>
+          </div>
+        </caption>
+      </table>
+    </div>
+  </div>
+</div>
